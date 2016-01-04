@@ -36,5 +36,5 @@ const history = createBrowserHistory();
 
 ReactDOM.render(
   <Router history={history} children={routes} />,
-  document
+  document.body
 );

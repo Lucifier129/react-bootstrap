@@ -61,6 +61,10 @@ const Root = React.createClass({
         <![endif]-->`
     };
 
+    if (typeof window !== 'undefined') {
+      return <div>{this.props.children}</div>
+    }
+
     return (
       <html>
         <head dangerouslySetInnerHTML={head} />

@@ -3,6 +3,7 @@ import webpack from 'webpack';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import baseConfig, { options, jsLoader } from './base.config';
 import ip from 'ip';
+import path from 'path'
 
 const webpackDevServerAddress = `http://${ip.address()}:${options.port}`;
 const cssSourceMap = options.debug ? '?sourceMap' : '';
@@ -47,5 +48,12 @@ export default _.extend({}, baseConfig, {
       { test: /\.jpe?g$|\.gif$|\.png|\.ico$/, loader: 'file?name=[name].[ext]' },
       { test: /\.eot$|\.ttf$|\.svg$|\.woff2?$/, loader: 'file?name=[name].[ext]' }
     ]
+  },
+
+  resolve: {
+    alias: {
+      'react': path.join(__dirname, '..', '..', 'react-lite'),
+      'react-dom': path.join(__dirname, '..', '..', 'react-lite')
+    }
   }
 });

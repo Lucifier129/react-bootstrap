@@ -8,17 +8,19 @@
   },
   "homepage": "http://react-bootstrap.github.io/",
   "scripts": {
-    "build": "babel-node tools/build-cli.js",
+    "build": "./node_modules/.bin/babel-node tools/build-cli.js",
     "test-watch": "karma start",
     "test-coverage": "COVERAGE=true karma start --single-run",
     "test": "npm run lint && npm run tests-set && npm run build",
     "tests-set": "karma start --single-run && _mocha --compilers js:babel-core/register test/server/*Spec.js",
     "lint": "eslint ./",
     "release": "release",
-    "docs-build": "babel-node tools/build-cli.js --docs-only",
-    "docs": "babel-node docs/dev-run",
-    "docs-prod": "npm run docs-build && NODE_ENV=production babel-node docs/server.js",
-    "docs-prod-unoptimized": "npm run docs-build -- --dev && NODE_ENV=production babel-node docs/server.js"
+    "docs-build": "./node_modules/.bin/babel-node tools/build-cli.js --docs-only",
+    "docs": "./node_modules/.bin/babel-node docs/dev-run",
+    "doc-start": "./node_modules/.bin/babel-node docs/server.js",
+    "start": "npm run doc-start",
+    "docs-prod": "npm run docs-build && NODE_ENV=production ./node_modules/.bin/babel-node docs/server.js",
+    "docs-prod-unoptimized": "npm run docs-build -- --dev && npm run doc-start"
   },
   "main": "lib/index.js",
   "directories": {
