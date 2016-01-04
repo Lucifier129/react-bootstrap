@@ -15,7 +15,7 @@ import routes from './src/Routes';
 import metadata from './generate-metadata';
 
 const development = false && process.env.NODE_ENV !== 'production';
-const port = process.env.PORT || 4001;
+const port = process.env.PORT || 8080;
 
 const app = express();
 
