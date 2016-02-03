@@ -110,6 +110,8 @@
     "yargs": "^3.27.0"
   },
   "dependencies": {
+    "ip": "^1.0.1",
+    "colors": "^1.1.2",
     "babel": "^5.8.23",
     "babel-core": "^5.8.25",
     "babel-eslint": "^4.1.3",
