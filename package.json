@@ -18,7 +18,7 @@
     "docs-build": "./node_modules/.bin/babel-node tools/build-cli.js --docs-only",
     "docs": "./node_modules/.bin/babel-node docs/dev-run",
     "doc-start": "./node_modules/.bin/babel-node docs/server.js",
-    "start": "npm run docs-prod-unoptimized",
+    "start": "npm run doc-start",
     "docs-prod": "npm run docs-build && NODE_ENV=production ./node_modules/.bin/babel-node docs/server.js",
     "docs-prod-unoptimized": "npm run docs-build -- --dev && npm run doc-start"
   },
