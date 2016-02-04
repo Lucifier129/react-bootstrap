@@ -46,6 +46,9 @@
     "react-dom": ">=0.14.0"
   },
   "devDependencies": {
+    
+  },
+  "dependencies": {
     "bootstrap": "^3.3.5",
     "brfs": "^1.4.1",
     "chai": "^3.3.0",
@@ -67,7 +70,6 @@
     "glob": "^5.0.15",
     "history": "^1.12.3",
     "http-proxy": "^1.11.2",
-    "ip": "^1.0.1",
     "isparta-loader": "^1.0.0",
     "json-loader": "^0.5.3",
     "karma": "~0.13.10",
@@ -107,9 +109,8 @@
     "transform-loader": "^0.2.3",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.0",
-    "yargs": "^3.27.0"
-  },
-  "dependencies": {
+    "yargs": "^3.27.0",
+    "express": "^4.13.3",
     "ip": "^1.0.1",
     "colors": "^1.1.2",
     "babel": "^5.8.23",
